@@ -1,7 +1,7 @@
 #!/bin/bash
-chown vagrant /home/vagrant/.ssh/id_rsa
-chmod 400 /home/vagrant/.ssh/id_rsa
-ssh-keyscan -H localhost >> /home/vagrant/.ssh/known_hosts
+#chown vagrant /home/vagrant/.ssh/id_rsa
+#chmod 400 /home/vagrant/.ssh/id_rsa
+#ssh-keyscan -H localhost >> /home/vagrant/.ssh/known_hosts
 sudo sed -i 's%archive.ubuntu.com%mirror.yandex.ru%' /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get upgrade -y
@@ -14,6 +14,6 @@ sudo apt dist-upgrade
 sudo apt-get update
 sudo apt-get autoremove
 sudo apt-get clean
-sudo dd if=/dev/zero of=/EMPTY bs=1M
-sudo rm -f /EMPTY
-cat /dev/null > ~/.bash_history && history -c
+#sudo dd if=/dev/zero of=/EMPTY bs=1M
+#sudo rm -f /EMPTY
+#cat /dev/null > ~/.bash_history && history -c

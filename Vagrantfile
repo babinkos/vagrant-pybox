@@ -11,8 +11,8 @@ Vagrant.configure("2") do |config|
   config.vm.define "pybox" do |pybox|
     pybox.vm.hostname = "pybox"
     pybox.vm.box = boxname
-    pybox.vm.network :private_network, ip: "192.168.56.113"
-    pybox.vm.provision "file", source: "#{Dir.home}/.vagrant.d/insecure_private_key", destination: "/home/vagrant/.ssh/id_rsa"
+    #pybox.vm.network :private_network, ip: "192.168.56.113"
+    #pybox.vm.provision "file", source: "#{Dir.home}/.vagrant.d/insecure_private_key", destination: "/home/vagrant/.ssh/id_rsa"
     pybox.vm.provision "shell", path: "pybox-install.sh"
   end
 end
