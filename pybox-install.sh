@@ -13,7 +13,7 @@ sudo apt-get install unzip -y
 sudo apt dist-upgrade
 sudo apt-get update
 sudo apt-get autoremove
-sudo apt-get clean
+#sudo apt-get clean
 #sudo dd if=/dev/zero of=/EMPTY bs=1M
 #sudo rm -f /EMPTY
 #cat /dev/null > ~/.bash_history && history -c
