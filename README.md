@@ -14,3 +14,6 @@ vagrant destroy -f
 echo "You can use now: "
 echo " boxname = 'pybox'"
 echo "in your Vagrantfile"
+```
+
+Use vbox-prepare.cmd or vbox-prepare.sh script to simple run this commands
