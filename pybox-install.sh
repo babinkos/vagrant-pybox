@@ -3,10 +3,10 @@ set -x
 sudo chown vagrant /home/vagrant/.ssh/id_rsa
 sudo chmod 400 /home/vagrant/.ssh/id_rsa
 #ssh-keyscan -H localhost >> /home/vagrant/.ssh/known_hosts
-sudo sed -i 's%deb http:\/\/us.archive.ubuntu.com%deb http:\/\/by.archive.ubuntu.com%' /etc/apt/sources.list
-sudo sed -i 's%deb http:\/\/archive.ubuntu.com%deb http:\/\/by.archive.ubuntu.com%' /etc/apt/sources.list
-sudo sed -i 's%deb-src http:\/\/us.archive.ubuntu.com%deb-src http:\/\/by.archive.ubuntu.com%' /etc/apt/sources.list
-sudo sed -i 's%deb-src http:\/\/archive.ubuntu.com%deb-src http:\/\/by.archive.ubuntu.com%' /etc/apt/sources.list
+sudo sed -i 's%deb http:\/\/us.archive.ubuntu.com%deb http:\/\/mirror.yandex.ru%' /etc/apt/sources.list
+sudo sed -i 's%deb http:\/\/archive.ubuntu.com%deb http:\/\/mirror.yandex.ru%' /etc/apt/sources.list
+sudo sed -i 's%deb-src http:\/\/us.archive.ubuntu.com%deb-src http:\/\/mirror.yandex.ru%' /etc/apt/sources.list
+sudo sed -i 's%deb-src http:\/\/archive.ubuntu.com%deb-src http:\/\/mirror.yandex.ru%' /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get -y install python-minimal
