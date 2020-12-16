@@ -7,9 +7,9 @@ vagrant halt
 #dpkg-statoverride --update --add root root 0644 /boot/vmlinuz-`uname -r`
 KERNVER=$(uname -r)
 [ "$( stat --format %a /boot/vmlinuz-${KERNVER} )" == "644" ] || sudo chmod 644 /boot/vmlinuz-${KERNVER}
-#LIBGUESTFS_DEBUG=1 LIBGUESTFS_TRACE=1 
+#LIBGUESTFS_DEBUG=1 LIBGUESTFS_TRACE=1
 vagrant package --output pybox.box 2>&1 | tee /tmp/pybox-package.log
-vagrant box add pybox pybox.box
+vagrant box add pybox pybox.box --force
 vagrant destroy -f
 rm pybox.box
 sudo rm -v /var/lib/libvirt/images/vagrant-pybox_pybox.img
