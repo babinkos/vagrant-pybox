@@ -12,6 +12,7 @@ vagrant package --output pybox.box 2>&1 | tee /tmp/pybox-package.log
 vagrant box add pybox pybox.box --force
 vagrant destroy -f
 rm pybox.box
+sudo virsh vol-delete pybox_vagrant_box_image_0.img --pool default
 sudo rm -v /var/lib/libvirt/images/vagrant-pybox_pybox.img
 #echo "You can use now: "
 #echo " boxname = pybox"
