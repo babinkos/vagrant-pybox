@@ -1,24 +1,20 @@
 # vagrant-pybox
-*steps to prepare tuned virtualbox box based on ubuntu/xenial64
+
+## This customized box with python installed is useful to test Ansible roles with Vagrant
+
+*steps to prepare tuned virtualbox box based on ubuntu/bionix64 (18.04)
  but with mirror.yandex.ru and installed packages:
-default-jdk,unzip,python-minimal, software-properties-common, python-software-properties*
+python-minimal, software-properties-common, python3-software-properties*
 
 ```sh
-git init
-git remote add -f origin https://github.com/babinkos/vagrant-pybox.git
-git pull origin master
-vagrant up
-vagrant package --output pybox.box
-vagrant box add pybox pybox.box
-vagrant destroy -f
-echo "You can use now: "
-echo " boxname = 'pybox'"
-echo "in your Vagrantfile"
+git clone https://github.com/babinkos/vagrant-pybox.git
+cd vagrant-pybox
+./vbox-prepare.sh
 ```
 
-Use vbox-prepare.cmd or vbox-prepare.sh script to simply run this commands
+Use vbox-prepare.cmd on Windows
 
-To remove customized box, run: 
+To remove customized box, run:
 ```sh
 vagrant box remove pybox
 ```
