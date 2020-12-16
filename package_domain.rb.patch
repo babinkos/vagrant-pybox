@@ -1,0 +1,11 @@
+--- /home/user/.vagrant.d/gems/2.4.3/gems/vagrant-libvirt-0.0.43/lib/vagrant-libvirt/action/package_domain.rb	2020-12-16 15:53:17.565195505 +0300
++++ /usr/share/rubygems-integration/all/gems/vagrant-libvirt-0.0.43/lib/vagrant-libvirt/action/package_domain.rb	2020-12-16 15:17:11.681815269 +0300
+@@ -38,7 +38,7 @@
+           `qemu-img rebase -p -b "" #{@tmp_img}`
+           # remove hw association with interface
+           # working for centos with lvs default disks
+-          `virt-sysprep --no-logfile --operations defaults,-ssh-userdir -a #{@tmp_img}`
++          `virt-sysprep --no-logfile --operations defaults,-ssh-userdir,-ssh-hostkeys -a #{@tmp_img}`
+           # add any user provided file
+           extra = ''
+           @tmp_include = @tmp_dir + '/_include'
